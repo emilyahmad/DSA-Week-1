@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 public class Student extends Person {
     // private instance variables
+    String department;
     ArrayList<String> classesTaken = new ArrayList<String>();
     ArrayList<Character> grades = new ArrayList<Character>();
 
@@ -10,8 +11,9 @@ public class Student extends Person {
      * methods to print the transcript for each student.
      */
 
-    public Student(String firstName, String lastName) {
+    public Student(String firstName, String lastName, String department) {
         super(firstName, lastName);
+        this.department = department;
         this.classesTaken = new ArrayList<>();
         this.grades = new ArrayList<>();
     }
@@ -22,6 +24,10 @@ public class Student extends Person {
     }
 
     // accessor method
+    public String getDepartment() {
+        return department;
+    }
+
     public ArrayList<String> getClassesTaken() {
         return new ArrayList<String>(classesTaken);
     }
@@ -31,7 +37,8 @@ public class Student extends Person {
     }
 
     public void printTranscript() {
-        System.out.println(getFirstName() + " " + getLastName() + "\'s Transcript, " + "ID: " + getUniqueID());
+        System.out.println(getFirstName() + " " + getLastName() + "\'s Transcript, " + "ID: " + getUniqueID()
+                + " Department: " + getDepartment());
         for (int i = 0; i < classesTaken.size(); i++) {
             System.out.println("Class: " + classesTaken.get(i) + " grade in class: " + grades.get(i));
         }
