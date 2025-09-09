@@ -26,12 +26,12 @@ public class Student extends Person {
         return new ArrayList<String>(classesTaken);
     }
 
-    public ArrayList<Character> grades() {
+    public ArrayList<Character> getGrades() {
         return new ArrayList<Character>(grades);
     }
 
     public void printTranscript() {
-        System.out.println(getFirstName() + " " + getLastName() + "\'s Transcript " + "ID: " + getUniqueID());
+        System.out.println(getFirstName() + " " + getLastName() + "\'s Transcript, " + "ID: " + getUniqueID());
         for (int i = 0; i < classesTaken.size(); i++) {
             System.out.println("Class: " + classesTaken.get(i) + " grade in class: " + grades.get(i));
         }
