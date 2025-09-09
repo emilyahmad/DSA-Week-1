@@ -40,7 +40,7 @@ public class Student extends Person {
         System.out.println(getFirstName() + " " + getLastName() + "\'s Transcript, " + "ID: " + getUniqueID()
                 + " Department: " + getDepartment());
         for (int i = 0; i < classesTaken.size(); i++) {
-            System.out.println("Class: " + classesTaken.get(i) + " grade in class: " + grades.get(i));
+            System.out.println("Class: " + classesTaken.get(i) + ", grade in class: " + grades.get(i));
         }
     }
 }
