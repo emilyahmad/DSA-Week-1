@@ -1,5 +1,4 @@
-public class FulltimeEmployee {
+public class FulltimeEmployee extends Employee {
     // private instance variable
-    private String department;
-    private double Salary;
+    private double salary;
 }

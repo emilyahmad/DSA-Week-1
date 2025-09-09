@@ -8,5 +8,10 @@ public class PersonTester {
 
         Person me = new Person("Emily", "Ahmad");
         System.out.println(me);
+
+        Student Sarah = new Student("Sarah", "Ahmad");
+        Sarah.addClass("Macroeconomics", 'a');
+        Sarah.addClass("Finance", 'a');
+        Sarah.printTranscript();
     }
 }
