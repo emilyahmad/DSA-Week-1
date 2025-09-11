@@ -8,7 +8,7 @@ public class Thermostat {
             throw new IllegalArgumentException("min must be <= max");
         this.min = min;
         this.max = max;
-        this.current = min; // any value within [min,max] would be fine
+        this.current = min;
     }
 
     public void setTemp(int t) throws TemperatureOutofRange {
